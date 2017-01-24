@@ -9,7 +9,7 @@ use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Path\PathMatcher;
 use Drupal\Core\Url;
 
-function userengage_page_attachments(array &$page, $account) {
+function userengage_page_attachments(array &$page) {
 
   $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
 
