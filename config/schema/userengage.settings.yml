@@ -1,0 +1,7 @@
+userengage.settings:
+  type: config_object
+  label: 'UserEngage settings'
+  mapping:
+    apiKey:
+      type: string
+      label: 'apiKey'

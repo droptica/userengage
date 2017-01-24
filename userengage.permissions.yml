@@ -1,0 +1,3 @@
+administer userengage:
+  title: 'Administer UserEngage module'
+  description: 'Permission to change UserEngage settings'

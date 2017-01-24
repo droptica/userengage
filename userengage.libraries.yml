@@ -1,0 +1,7 @@
+userengage:
+  version: VERSION
+  js:
+    js/userengage.js: { scope: footer }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

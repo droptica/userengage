@@ -1,0 +1,42 @@
+<?php
+
+/*
+ * @file
+ * Adds the required Javascript for UserEngage widget
+ */
+
+use Drupal\Component\Utility\Unicode;
+use Drupal\Core\Path\PathMatcher;
+use Drupal\Core\Url;
+
+function userengage_page_attachments(array &$page, $account) {
+
+  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+
+  $config = \Drupal::config('userengage.settings');
+
+  static $already_added = FALSE;
+
+  if ($already_added) {
+    return;
+  }
+
+  if (drupal_installation_attempted()) {
+    return;
+  }
+
+  if (empty($config->get('apiKey'))) {
+    return;
+  }
+
+  $js_settings = [
+    'apiKey' => $config->get('apiKey'),
+    'name' => $user->get('name')->value,
+    'email' => $user->get('mail')->value,
+  ];
+  
+  $page['#attached']['drupalSettings']['userengage'] = $js_settings;
+  $page['#attached']['library'][] = 'userengage/userengage';
+
+  $already_added = TRUE;
+}

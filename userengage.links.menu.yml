@@ -1,0 +1,5 @@
+userengage.settings:
+ title: 'UserEngage'
+ description: 'Marketing automation: live chat, email marketing users actions!'
+ parent: system.admin_config_services
+ route_name: userengage.settings

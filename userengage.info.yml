@@ -1,0 +1,6 @@
+name: UserEngage
+type: module
+description: Adds UserEngage javascript tracking code.
+package: Utility
+core: 8.x
+configure: userengage.settings

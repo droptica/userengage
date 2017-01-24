@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the UserEngage module.
+ */
+
+function userengage_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'runtime') {
+    if (\Drupal::config('userengage.settings')->get('apiKey', FALSE) == FALSE) {
+      $requirements['userengage'] = [
+        'title' => t('UserEngage module'),
+        'description' => t('UserEngage module has not been configured yet. Please configure its settings from the <a href="https://app.userengage.io">UserEngage page</a>.'),
+        'severity' => REQUIREMENT_ERROR,
+        'value' => t('Not configured'),
+      ];
+    }
+  }
+
+  return $requirements;
+}
