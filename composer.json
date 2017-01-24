@@ -1,4 +1,5 @@
 {
   "name": "droptica/userengage",
-  "description": "Droptica's userengage module twists"
+  "description": "Droptica's userengage module twists",
+  "type": "droptica-module"
 }
