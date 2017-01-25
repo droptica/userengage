@@ -1,8 +1,5 @@
 {
   "name": "droptica/userengage",
   "description": "Droptica's userengage module twists",
-  "type": "droptica-module",
-  "require": {
-    "composer/installers": "~1.0"
-  }
+  "type": "drupal-module"
 }
